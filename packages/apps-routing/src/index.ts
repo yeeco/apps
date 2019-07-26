@@ -27,46 +27,46 @@ import treasury from './treasury';
 
 const routes: Routes = appSettings.uiMode === 'light'
   ? ([] as Routes).concat(
-    dashboard,
-    explorer,
+   // dashboard,
+   // explorer,
     accounts,
     addressbook,
     transfer,
-    null,
-    staking,
-    democracy,
-    council,
+   // null,
+    // staking,
+    // democracy,
+    // council,
     // TODO Not sure about the inclusion of treasury & parachains here
-    null,
-    settings,
-    template
+  //  null,
+    //settings,
+    //template
   )
   : ([] as Routes).concat(
-    dashboard,
-    explorer,
+    // dashboard,
+    // explorer,
     accounts,
     addressbook,
     transfer,
-    null,
-    staking,
-    democracy,
-    council,
-    treasury,
-    parachains,
-    null,
-    contracts,
-    storage,
+   // null,
+    // staking,
+    // democracy,
+    // council,
+    // treasury,
+    // parachains,
+   // null,
+    // contracts,
+    // storage,
     extrinsics,
-    sudo,
-    null,
-    settings,
+   // sudo,
+  //  null,
+   // settings,
     toolbox,
-    js,
-    template
+   // js,
+    //template
   );
 
 const setup: Routing = {
-  default: 'explorer',
+  default: 'accounts',
   routes
 };
 

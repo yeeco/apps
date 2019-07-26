@@ -99,11 +99,9 @@ class SideBar extends React.PureComponent<Props, State> {
             vertical
           >
             <div className='apps-SideBar-Scroll'>
-              {this.renderLogo()}
+
               {this.renderRoutes()}
               <Menu.Divider hidden />
-              {this.renderGithub()}
-              {this.renderWiki()}
               <Menu.Divider hidden />
               {
                 isCollapsed
@@ -197,35 +195,35 @@ class SideBar extends React.PureComponent<Props, State> {
     ));
   }
 
-  private renderGithub (): React.ReactNode {
-    return (
-      <Menu.Item className='apps--SideBar-Item'>
-        <a
-          className='apps--SideBar-Item-NavLink'
-          href='https://github.com/polkadot-js/apps'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          <Icon name='github' /><span className='text'>GitHub</span>
-        </a>
-      </Menu.Item>
-    );
-  }
-
-  private renderWiki (): React.ReactNode {
-    return (
-      <Menu.Item className='apps--SideBar-Item'>
-        <a
-          className='apps--SideBar-Item-NavLink'
-          href='https://wiki.polkadot.network'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          <Icon name='book' /><span className='text'>Wiki</span>
-        </a>
-      </Menu.Item>
-    );
-  }
+  // private renderGithub (): React.ReactNode {
+  //   return (
+  //     <Menu.Item className='apps--SideBar-Item'>
+  //       <a
+  //         className='apps--SideBar-Item-NavLink'
+  //         href='https://github.com/polkadot-js/apps'
+  //         rel='noopener noreferrer'
+  //         target='_blank'
+  //       >
+  //         <Icon name='github' /><span className='text'>GitHub</span>
+  //       </a>
+  //     </Menu.Item>
+  //   );
+  // }
+  //
+  // private renderWiki (): React.ReactNode {
+  //   return (
+  //     <Menu.Item className='apps--SideBar-Item'>
+  //       <a
+  //         className='apps--SideBar-Item-NavLink'
+  //         href='https://wiki.polkadot.network'
+  //         rel='noopener noreferrer'
+  //         target='_blank'
+  //       >
+  //         <Icon name='book' /><span className='text'>Wiki</span>
+  //       </a>
+  //     </Menu.Item>
+  //   );
+  // }
 
   private closeModal = (name: string): () => void => {
     return (): void => {

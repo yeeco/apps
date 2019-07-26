@@ -46,9 +46,7 @@ class NodeInfo extends React.PureComponent<Props> {
 
     return (
       <Wrapper>
-        {this.renderNode()}
-        <div>{api.libraryInfo.replace('@polkadot/', '')}</div>
-        <div>{uiInfo}</div>
+
       </Wrapper>
     );
   }
